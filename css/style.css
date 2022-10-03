@@ -1,0 +1,89 @@
+.layout {
+    width: 100%;
+    /* 最大宽度 */
+    max-width: 640px;
+    /* 最小宽度 */
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    height: 44px;
+    background-color: #F8EEEC;
+}
+.user {
+    width: 44px;
+    height: 44px;
+}    
+.tingeshiqu {
+    width: 44px;
+    height: 46px; 
+    margin-top:0%
+    
+    
+}
+.searchbox{
+    height: 44px;
+    flex: 1;
+}
+/* .searchbox::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(images/sprites.png) no-repeat -172px -79px;
+    
+} */
+.searchbox input{
+    width: 544px;
+    height: 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    padding-left: 30px;
+}
+/* 焦点动图 */
+.focus {
+    padding-top: 44px;
+}
+.focus img {
+    width: 100%;
+}
+/* 局部导航栏 */
+.local-nav {
+    display: flex;
+    height: 82px;
+    background-color: #fff;
+}
+.local-nav li {
+    flex: 1;
+}
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
+}
+.local-nav-icon {
+   width: 41px; 
+   height: 41px; 
+   margin-top: 10px;
+   background:
