@@ -6,6 +6,7 @@
     min-width: 320px;
     margin: 0 auto;
     background-color: #fff;
+    font-family: Microsoft Yahei;
 }
 ul {
     list-style: none;
@@ -14,6 +15,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: rgb(127, 127, 127);
 }
 .search {
     display: flex;
@@ -35,15 +37,12 @@ a {
 }    
 .tingeshiqu {
     width: 44px;
-    height: 46px; 
+    height: 44px; 
     margin-top:0%
     
     
 }
-.searchbox{
-    height: 44px;
-    flex: 1;
-}
+/* 伪元素插入图片 没成功*/
 /* .searchbox::before {
     content: "";
     display: block;
@@ -52,8 +51,8 @@ a {
     background: url(images/sprites.png) no-repeat -172px -79px;
     
 } */
-.searchbox input{
-    width: 544px;
+.searchbox {
+    flex: 1;
     height: 26px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -62,7 +61,7 @@ a {
 }
 /* 焦点动图 */
 .focus {
-    padding-top: 44px;
+    padding-top: 40px;
 }
 .focus img {
     width: 100%;
@@ -72,6 +71,7 @@ a {
     display: flex;
     height: 82px;
     background-color: #fff;
+    margin-top: 6px;
 }
 .local-nav li {
     flex: 1;
@@ -81,9 +81,76 @@ a {
     flex-direction: column;
     /* 侧轴居中对齐 */
     align-items: center;
+    font-size: 16px;
 }
-.local-nav-icon {
-   width: 41px; 
-   height: 41px; 
+.local-nav-icon img {
+   width: 50px; 
+   height: 50px; 
    margin-top: 10px;
-   background:
+}   
+/* 一条灰色的线 */
+.huisexian {
+    border-top: 1px solid rgb(231,231,231);
+    width: 640px;
+    margin-top: 20px;
+}
+/* 推荐歌单 */
+.recommend {
+    display: flex;
+    height: 41px;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+.tuijiangedan {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+}
+.more {
+    border-radius: 70px;
+    /* margin-top: 10px; */
+    width: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* 推荐歌单下的三张图片 */
+.local-pic {
+    display: flex;
+    height: 164px;
+    background-color: #fff;
+    margin-top: 6px;
+}
+.local-pic li {
+    flex: 1;
+}
+.local-pic a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
+    font-size: 16px;
+}
+.local-picture-icon-icon1 img {
+    width: 164px; 
+    height: 164px; 
+    margin-top: 5px;
+    margin-left: 0%;
+}
+.local-picture-icon-icon2 img {
+    width: 164px; 
+    height: 164px; 
+    margin-top: 5px;
+    
+}
+.local-picture-icon-icon3 img {
+    width: 164px; 
+    height: 164px; 
+    margin-top: 5px;
+    margin-right: 0%;
+}
+
+
+
+
+
+
