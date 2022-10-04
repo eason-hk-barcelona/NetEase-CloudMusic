@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网易云音乐</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="layout">
@@ -16,9 +16,9 @@
                 <img src="images/user.jpg" class="user">
             </a>
         </div>
-        <div class="searchbox">
-            <input type="text" placeholder="nameless">
-        </div>
+        
+        <input type="text" placeholder="nameless" class="searchbox">
+        
         <div class="tingeshiqu">
             <a href="#" >
                 <img src="images/tingeshiqu.jpg" class="tingeshiqu">
@@ -34,17 +34,81 @@
     <ul class="local-nav">
         <li>
             <a href="#">
-                <span class="local-nav-icon"></span>
+                <span class="local-nav-icon">
+                    <img src="images/app01.png" alt="">
+                </span>
                 <span>每日推荐</span>
             </a>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+            <a href="#">
+                <span class="local-nav-icon">
+                    <img src="images/app02.png" alt="">
+                </span>
+                <span>私人FM</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="local-nav-icon">
+                    <img src="images/app03.png" alt="">
+                </span>
+                <span>歌单</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="local-nav-icon">
+                    <img src="images/app04.png" alt="">
+                </span>
+                <span>排行榜</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="local-nav-icon">
+                    <img src="images/app05.png" alt="">
+                </span>
+                <span>有声书</span>
+            </a>
+        </li>
     </ul>
+    <div class="huisexian"></div>
     <!-- 推荐歌单 -->
-    <div class="recommend"></div>
+    <div class="recommend">
+        <div class="tuijiangedan">推荐歌单</div>
+        <a href="#">
+            <input type="text"  placeholder="   更多 >"  class="more">
+        </a>
+    </div>
+    <!-- 三个图片导入 -->
+    <ul class="local-pic">
+        <li>
+            <a href="#">
+                <span class="local-picture-icon-icon1">
+                    <img src="images/app06.png" alt="">
+                </span>
+                <span>意识流电子 | 梦境边缘的旅程</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="local-picture-icon-icon2">
+                    <img src="images/app07.png" alt="">
+                </span>
+                <span>今天从《彩虹的微笑》听起|私人雷达</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="local-picture-icon-icon3">
+                    <img src="images/app08.png" alt="">
+                </span>
+                <span>那些无限循环的歌</span>
+            </a>
+        </li>
+    </ul>
+
 </div>
 </body>
 </html>
