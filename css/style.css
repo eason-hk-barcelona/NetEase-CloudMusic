@@ -7,11 +7,19 @@
     margin: 0 auto;
     background-color: #fff;
     font-family: Microsoft Yahei;
+    box-sizing: border-box;
+}
+.part1 {
+    border-radius: 12px;
+}
+.part2 {
+    border-radius: 12px;
 }
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    
 }
 a {
     text-decoration: none;
@@ -107,11 +115,20 @@ a {
     margin: 5px;
 }
 .more {
-    border-radius: 70px;
-    /* margin-top: 10px; */
-    width: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    position: relative;
+}
+
+#find-more{  
+    position: relative; 
+    top: 30%;
+    transform: trans;
+    width: 100px;
+    border: solid red;
+    border-radius: 17px;
+    color: black;
+    background-color: #fff;
+    padding: 4px 7px;
+    font-weight: 700;
 }
 /* 推荐歌单下的三张图片 */
 .local-pic {
@@ -119,6 +136,7 @@ a {
     height: 164px;
     background-color: #fff;
     margin-top: 6px;
+    
 }
 .local-pic li {
     flex: 1;
@@ -126,27 +144,110 @@ a {
 .local-pic a {
     display: flex;
     flex-direction: column;
-    /* 侧轴居中对齐 */
-    align-items: center;
     font-size: 16px;
-}
-.local-picture-icon-icon1 img {
-    width: 164px; 
-    height: 164px; 
-    margin-top: 5px;
-    margin-left: 0%;
-}
-.local-picture-icon-icon2 img {
-    width: 164px; 
-    height: 164px; 
-    margin-top: 5px;
+    justify-content: center;
     
 }
-.local-picture-icon-icon3 img {
-    width: 164px; 
-    height: 164px; 
+.local-picture-icon-icon1  {
+    width: 174px; 
+    height: 174px; 
     margin-top: 5px;
-    margin-right: 0%;
+    align-self: flex-start;
+   
+}
+.local-picture-icon-icon2  {
+    width: 174px; 
+    height: 174px; 
+    margin-top: 5px;
+    align-self: center;
+    
+}
+.local-picture-icon-icon3  {
+    width: 174px; 
+    height: 174px; 
+    margin-top: 5px;
+    align-self: flex-end;
+}
+.word-1 {
+    width: 174px;
+    font-weight: 400;
+}
+.word-2 {
+    width: 174px;
+    padding-left: 10%;
+    font-weight: 400;
+}
+.word-3 {
+    width: 174px;
+    padding-left: 20%;
+    font-weight: 400;
+}
+/* 推送栏 */
+.push-box {
+    margin-top: 58px;
+    border-top: 20px solid  rgb(245,245,245);
+    background-color: #fff;
+    
+}
+
+.push-hd {
+    position: relative;
+    height: 54px;
+    border-bottom: 2px solid  rgb(62,173,206);
+}
+
+.play {
+    font-weight: 700;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    border-radius: 15px;
+    padding: 4px 10px;
+}
+.local-rcm {
+    display: flex;
+    height: 200px;
+    background-color: #fff;
+    margin-top: 5px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.local-rcm li {
+    flex: 1;
+}
+.local-rcm a {
+    display: flex;
+    
+}
+.local-rcm-icon img{
+    width: 70px;
+    height: 70px;
+    
+}
+p {
+    font-weight: 400;
+    font-size: 1.1em;
+    color: black;
+    
+}
+.comment-1 {
+    width: 550px;
+    margin-left: 10px;
+    border-bottom: 2px solid rgb(243,243,243) ;
+}
+.comment-2 {
+    width: 550px;
+    margin-left: 10px;
+}
+.word {
+    width: 52px;
+    border-radius: 13px;
+    background-color:rgb(255,241,232);
+    color: rgb(251,132,78);
+    font-size: 11px;
+    padding: 4px;
+    margin: 2px;
 }
 
 
