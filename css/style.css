@@ -67,13 +67,88 @@ a {
     border-radius: 15px;
     padding-left: 30px;
 }
-/* 焦点动图 */
-.focus {
+/* 焦点动图 纯css法一*/
+/* .focus {
+    width: 640px;
+    height: 248.45px;
+    margin: 0 auto;
     padding-top: 40px;
+    overflow: hidden;
 }
-.focus img {
+.boxes {
+    list-style: none;
+    width: 9999px;
+    height: 248.45px;
+    
+}
+.box {
+    float: left;
+    width: 640px;
+    height: 248.45px;
+    animation: move 12s steps(3,end) infinite ;
+}
+.box img {
+    
     width: 100%;
+    height: 100%;
+    
 }
+.boxes:hover {
+    animation-play-state: paused;
+}
+
+@keyframes move { 
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-1920px);
+    }
+} */
+
+/* 焦点动图纯css法二（力求丝滑效果） */
+  .focus {
+    width: 640px;
+    height: 248.45px;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+  .boxes {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: move 15s steps(3,end) infinite;
+  }
+  .box {
+    width: 640px;
+    height: 248.45px;
+    flex-shrink: 0;
+    animation: limove 5s infinite;
+  }
+  .box img {
+    width: 100%;
+    height: 100%;
+ }
+ .boxes:hover {
+    animation-play-state: paused;
+ }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-1920px, 0);
+    }
+  }
+  @keyframes limove {
+    0% {
+      transform: translate(0, 0);
+    }
+    80%,
+    100%  {
+      transform: translate(-640px, 0);
+    }
+  }
+
 /* 局部导航栏 */
 .local-nav {
     display: flex;
@@ -92,8 +167,8 @@ a {
     font-size: 16px;
 }
 .local-nav-icon img {
-   width: 50px; 
-   height: 50px; 
+   width: 55px; 
+   height: 55px; 
    margin-top: 10px;
 }   
 /* 一条灰色的线 */
@@ -133,7 +208,7 @@ a {
 /* 推荐歌单下的三张图片 */
 .local-pic {
     display: flex;
-    height: 164px;
+    height: 222px;
     background-color: #fff;
     margin-top: 6px;
     
@@ -141,6 +216,43 @@ a {
 .local-pic li {
     flex: 1;
 }
+.change {
+    width: 213.33px;
+    height: 222px;
+    overflow: hidden;
+}
+.change-ul {
+    display: flex;
+    flex-direction: column;
+    animation: sprite 15s steps(3,end) infinite;
+}
+.change-ul>li {
+    width: 100%;
+    height: 100%;
+    animation: spriteli 5s infinite;
+}
+
+.boxes:hover {
+    animation-play-state: paused;
+}
+@keyframes sprite {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -666px);
+    }
+  }
+  @keyframes spriteli {
+    0% {
+      transform: translate(0, 0);
+    }
+    80%,
+    100%  {
+      transform: translate(0, -222px);
+    }
+  }
+  
 .local-pic a {
     display: flex;
     flex-direction: column;
@@ -184,7 +296,7 @@ a {
 }
 /* 推送栏 */
 .push-box {
-    margin-top: 58px;
+    margin-top: 18px;
     border-top: 20px solid  rgb(245,245,245);
     background-color: #fff;
     
@@ -207,11 +319,11 @@ a {
 }
 .local-rcm {
     display: flex;
-    height: 200px;
+    height: 163.5px;
     background-color: #fff;
     margin-top: 5px;
     flex-direction: column;
-    border-radius: 8px;
+    border-bottom: 2px solid rgb(244,244,244) ;
 }
 .local-rcm li {
     flex: 1;
@@ -228,8 +340,7 @@ a {
 p {
     font-weight: 400;
     font-size: 1.1em;
-    color: black;
-    
+    color:rgb(89,89,89);
 }
 .comment-1 {
     width: 550px;
@@ -249,6 +360,72 @@ p {
     padding: 4px;
     margin: 2px;
 }
+.playfield {
+    position: relative;
+    height: 50px;
+    /* background-color: pink; */
+   
+}
+.song {
+   font-size: 1.1em;
+   color: rgb(89,89,89);
+}
+.song img {
+    position: absolute;
+    bottom: 0.01px;
+    width: 60px;
+    height: 60px;
+}
+.details {
+    position: absolute;
+    left: 65px;
+    top: 10px;
+}
+.size {
+    font-size: 13px;
+}
+.playbutton img {
+    position: absolute;
+    right: 84px;
+    height: 50px;
+    width: 50px;
+}
+.menu img {
+    position: absolute;
+    right: 14px;
+    height: 50px;
+    width: 50px;
+}
+.local-option {
+    display: flex;
+    height: 65px;
+    background-color: #fff;
+    margin-top: 6px;
+}
+.local-option li {
+    flex: 1;
+}
+.local-option a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
+    font-size: 16px;
+}
+.local-option-icon img {
+   width: 45px; 
+   height: 45px; 
+   margin-top: 10px;
+} 
+.red {
+    background-image: linear-gradient(to right, #FF506C, #F20079);
+    -webkit-background-clip: text;
+    color: transparent;
+}  
+
+
+
+
 
 
 
