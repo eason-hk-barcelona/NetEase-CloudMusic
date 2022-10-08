@@ -8,13 +8,20 @@
     background-color: #fff;
     font-family: Microsoft Yahei;
     box-sizing: border-box;
+    min-height: 100%;
 }
-.part1 {
-    border-radius: 12px;
+main {
+    padding-bottom: 83.5px;
 }
-.part2 {
-    border-radius: 12px;
+footer {
+    height: 83.5px;
+    width: 640px;
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    z-index: 640;
 }
+
 ul {
     list-style: none;
     margin: 0;
@@ -29,15 +36,18 @@ a {
     display: flex;
     justify-content: space-between;
     position: fixed;
+    /* 堆叠顺序，越大越在上面 */
+    z-index: 640;
     top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 100%;
+    height: 44px;
     max-width: 640px;
     min-width: 320px;
-    height: 44px;
     background-color: #F8EEEC;
+    
 }
 .user {
     width: 44px;
@@ -50,15 +60,7 @@ a {
     
     
 }
-/* 伪元素插入图片 没成功*/
-/* .searchbox::before {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 32px;
-    background: url(images/sprites.png) no-repeat -172px -79px;
-    
-} */
+
 .searchbox {
     flex: 1;
     height: 26px;
@@ -66,7 +68,21 @@ a {
     margin-bottom: 5px;
     border-radius: 15px;
     padding-left: 30px;
+   
 }
+/* 伪元素插入图片 没成功*/
+/* .searchbox::before {
+    content: "";
+    display: block;
+    background: "C:\Users\Eason\Desktop\binyan internship\images\app17.png"
+}
+.search-icon {
+    width: 22px;
+    height: 22px;
+} */
+
+
+
 /* 焦点动图 纯css法一*/
 /* .focus {
     width: 640px;
@@ -128,9 +144,7 @@ a {
     width: 100%;
     height: 100%;
  }
- .boxes:hover {
-    animation-play-state: paused;
- }
+
   @keyframes move {
     0% {
       transform: translate(0, 0);
@@ -155,6 +169,7 @@ a {
     height: 82px;
     background-color: #fff;
     margin-top: 6px;
+    
 }
 .local-nav li {
     flex: 1;
@@ -217,8 +232,8 @@ a {
     flex: 1;
 }
 .change {
-    width: 213.33px;
-    height: 222px;
+    width: 174px;
+    height: 217px;
     overflow: hidden;
 }
 .change-ul {
@@ -232,9 +247,7 @@ a {
     animation: spriteli 5s infinite;
 }
 
-.boxes:hover {
-    animation-play-state: paused;
-}
+
 @keyframes sprite {
     0% {
       transform: translate(0, 0);
@@ -265,6 +278,7 @@ a {
     height: 174px; 
     margin-top: 5px;
     align-self: flex-start;
+    z-index: 174;
    
 }
 .local-picture-icon-icon2  {
@@ -306,6 +320,7 @@ a {
     position: relative;
     height: 54px;
     border-bottom: 2px solid  rgb(62,173,206);
+    border-radius: 10px;
 }
 
 .play {
@@ -360,11 +375,10 @@ p {
     padding: 4px;
     margin: 2px;
 }
+/* 播放栏 */
 .playfield {
     position: relative;
     height: 50px;
-    /* background-color: pink; */
-   
 }
 .song {
    font-size: 1.1em;
@@ -395,12 +409,21 @@ p {
     right: 14px;
     height: 50px;
     width: 50px;
+    z-index: 50;
+    bottom: 0; 
+
 }
+
 .local-option {
     display: flex;
     height: 65px;
     background-color: #fff;
     margin-top: 6px;
+    /* position: fixed;
+    /* 堆叠顺序，越大越在上面 */
+    /* z-index: 640;
+    bottom: 0;  */
+    
 }
 .local-option li {
     flex: 1;
@@ -422,11 +445,6 @@ p {
     -webkit-background-clip: text;
     color: transparent;
 }  
-
-
-
-
-
 
 
 
